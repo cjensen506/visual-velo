@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <!-- Basic Page Needs
+        ================================================== -->
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="icon" type="image/png" href="images/LobsterLogo_icon.png">
+        <title>Visual Velo</title>
+        <meta name="description" content="A data visualization of 2014 tour de france general classification results">
+        <meta name="keywords" content="tour de france 2014, tour de france, le tour, yellow jersey, data visualization, dataviz">
+        <meta name="author" content="Chris">
+        <!-- Mobile Specific Metas
+        ================================================== -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Template CSS Files
+        ================================================== -->
+        <!-- Twitter Bootstrs CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Ionicons Fonts Css -->
+        <link rel="stylesheet" href="css/ionicons.min.css">
+        <!-- animate css -->
+        <link rel="stylesheet" href="css/animate.css">
+        <!-- Hero area slider css-->
+        <link rel="stylesheet" href="css/slider.css">
+        <!-- owl craousel css -->
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/owl.theme.css">
+        <link rel="stylesheet" href="css/jquery.fancybox.css">
+        <!-- template main css file -->
+        <link rel="stylesheet" href="css/main.css">
+        <!-- responsive css -->
+        <link rel="stylesheet" href="css/responsive.css">
+        <!-- chosen css-->
+        <link rel="stylesheet" href="css/chosen.css">
+        <!-- My cycling graph css-->
+        <link rel="stylesheet" href="css/CyclingGraph.css">
+        
+        <!-- Template Javascript Files
+        ================================================== -->
+        <!-- modernizr js -->
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <!-- jquery -->
+        <!--   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+        <script src="js/jquery-1.11.3.min.js"></script> 
+        <!-- owl carouserl js -->
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- bootstrap js -->
+
+        <script src="js/bootstrap.min.js"></script>
+        <!-- wow js -->
+        <script src="js/wow.min.js"></script>
+        <!-- slider js -->
+        <script src="js/slider.js"></script>
+        <script src="js/jquery.fancybox.js"></script>
+        <!-- template main js -->
+        <script src="js/main.js"></script>
+        
+        <script src="js/jquery-1.11.3.min.js"></script> 
+        <script type="text/javascript" src="js/d3.min.js"></script>
+        <script src="js/chosen.jquery.min.js"></script>
+        <script src="js/GoogleAnalytics.js"></script>
+        
+        
+        
+    </head>
+    <body>
+        <!--
+        ==================================================
+        Header Section Start
+        ================================================== -->
+        <header id="top-bar" class="navbar-top animated-header">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- responsive nav button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <!-- /responsive nav button -->
+                    
+                    <!-- logo -->
+                    <div class="navbar-brand">
+                        <a href="index.html" >
+                            <img src="images/LobsterLogo_small.png" alt="">
+                        </a>
+                    </div>
+                    <!-- /logo -->
+                </div>
+                <!-- main menu -->
+                <nav class="collapse navbar-collapse navbar-right" role="navigation">
+                    <div class="main-menu">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="tdf2015.html" class="dropdown-toggle" data-toggle="dropdown">Tour de France<span class="caret"></span></a>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li><a href="tdf2015.html">2015</a></li>
+                                        <li><a href="tdf2014.html">2014</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="giro2016.html" class="dropdown-toggle" data-toggle="dropdown">Giro d'Italia<span class="caret"></span></a>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li><a href="giro2016.html">2016</a></li>
+                                        <li><a href="giro2015.html">2015</a></li>
+                                        <li><a href="giro2014.html">2014</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="vuelta2015.html" class="dropdown-toggle" data-toggle="dropdown">Vuelta a España<span class="caret"></span></a>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li><a href="vuelta2015.html">2015</a></li>
+                                        <li><a href="vuelta2014.html">2014</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="about.html">About</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- /main nav -->
+            </div>
+        </header>
+        <!--
+
+        <!--
+        ==================================================
+        Global Page Section Start
+        ================================================== -->
+        <section class="global-page-header france">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="block">
+                            <h2>Tour de France, 2014</h2>
+                            <h3>Individual Overall, Yellow Jersey</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!--/#Page header-->
+        <!--
+        ==================================================
+        Graph Stuff
+        ================================================== -->
+        
+            <div class = "container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Controls</h3>
+                    </div>
+                </div>
+                <div class="row text-center vcenter">
+                    <div class="col-md-4">
+                        Y Axis Type: <input name="updateButton" type="button" value="By Place" onclick="currentDisplay=0; updateData(TransitionTime)" /> /
+                        <input name="updateButton" type="button" value="By Timegap" onclick="currentDisplay=1; updateData(TransitionTime)" />
+                    </div>
+                    <div class="col-md-4">
+                        <input id="GCcheckbox" type="checkbox" onclick="GCfunction(this.checked);"> GC contenders only
+                    </div>
+                    <div id="OSlider" class="col-md-4">
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div id="DropHolder" class="col-md-12">
+                        <select id="CountriesDrop" class="chosen-select-deselect">
+                            <option></option>
+                        </select>
+                        <select id="TeamDrop" class="chosen-select-deselect">
+                            <option></option>
+                        </select>
+                        <select id="RiderDrop" class="chosen-select" multiple="">
+                            <option></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-md-12">
+                        <h3>Results</h3>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-xs-1"></div>
+                    <div id="ProfilePlot" class="col-xs-9"></div>
+                    <div class="col-xs-2"></div>
+                    
+                </div>
+                <div class="row">
+                    <div class="asdf">
+                        <div id="tooltip1a" class="hidden1a">
+                            <p><strong><span id="name">100</span></strong>
+                            </p>
+                            <p><strong>Place: </strong><span id="place">100</span>
+                            </p>
+                            <p><strong>Timegap: </strong><span id="timegap">100</span>
+                            </p>
+                            <p id="Team"></p>
+                            <p id="Country"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div id="ZoomBar" class="col-xs-1 text-right"></div>
+                    <div id="RiderGraph" class="col-xs-9"></div>
+                    <div class="col-xs-2"></div>
+                </div>
+            </div>
+
+            <script src="js/tdf2014.min.js"></script>
+        
+            <!--
+            ==================================================
+            Footer Section Start
+            ================================================== -->
+            <footer id="footer">
+                <div class="container">
+                    <div class="col-md-8">
+                        <p class="copyright">Copyright: <span>2016</span> . Design and Developed by Visual Velo</p>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- Social Media -->
+                        <ul class="social">
+                            <li>
+                                <p>editor@visualvelo.com</p>
+                            </li>
+                            <li>
+                                <a href="http://www.facebook.com/visvelo/" class="Facebook">
+                                    <i class="ion-social-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/Visual_Velo" class="Twitter">
+                                    <i class="ion-social-twitter"></i>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </footer> <!-- /#footer -->
+                
+            </body>
+        </html>
